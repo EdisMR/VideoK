@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Video Responsivo</title>
+	<style>
+		/* Estilos Generales */
+		body {
+			background-color: rgb(51, 51, 51);
+			/* #333 en RGB */
+			color: rgb(238, 238, 238);
+			/* #eee en RGB */
+			font-family: sans-serif;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding: 20px;
+			margin: 0;
+		}
+
+		h1 {
+			margin-bottom: 20px;
+		}
+
+		/* Contenedor del video */
+		.video-container {
+			width: 100%;
+			/* Por defecto 100% para móviles */
+			display: flex;
+			justify-content: center;
+		}
+
+		video {
+			width: 100%;
+			height: auto;
+			border-radius: 8px;
+		}
+
+		/* Ajuste para computadoras (pantallas mayores a 768px) */
+		@media (min-width: 768px) {
+			.video-container {
+				width: 400px;
+				/* Ancho fijo en escritorio */
+			}
+		}
+	</style>
+</head>
+
+<body>
+
+	<h1>Mi Video Favorito</h1>
+
+	<div class="video-container">
+		<video controls>
+			<source src="tu-video.mp4" type="video/mp4">
+			Tu navegador no soporta videos HTML5.
+		</video>
+	</div>
+
+</body>
+
+</html>
